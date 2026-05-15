@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy / 隐私政策 — 趣味决策转盘 Fun Decision Wheel</title>
+  <style>
+    :root {
+      --primary: #7c3aed;
+      --bg: #f8f7ff;
+      --card: #fff;
+      --text: #1e1b2e;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #f3f0ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+      color: #fff;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    header .app-icon {
+      width: 72px; height: 72px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      margin-bottom: 16px;
+    }
+    header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 4px; }
+    header .subtitle { font-size: 1rem; opacity: 0.85; margin-bottom: 2px; }
+    header p { font-size: 0.88rem; opacity: 0.7; }
+    .lang-toggle {
+   display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 24px;
+   background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+    z-index: 100;
+    }
+    .lang-btn {
+      padding: 8px 28px;
+      border-radius: 20px;
+      border: 2px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+  .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+    .section {
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section h2 .icon { font-size: 1.2rem; }
+    .section p { color: var(--text); margin-bottom: 10px; font-size: 0.95rem; }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    .section ul li {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    .highlight-box {
+      background: var(--accent);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 0.93rem;
+      color: var(--primary);
+      font-weight: 500;
+    }
+    .meta-bar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 24px;
+    margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .meta-bar span strong { color: var(--text); }
+    .no-collect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    margin: 12px 0;
+    }
+    .no-collect-item {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.88rem;
+      color: #991b1b;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .no-collect-item::before { content: "✗"; font-weight: 700; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    .lang-cn, .lang-en { display: none; }
+    .lang-cn.visible, .lang-en.visible { display: block; }
+    @media (max-width: 600px) {
+      .section { padding: 20px 18px; }
+      header h1 { font-size: 1.4rem; }
+      .no-collect-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">🎡</div>
+  <h1>趣味决策转盘</h1>
+  <div class="subtitle">Fun Decision Wheel</div>
+  <p>Privacy Policy &nbsp;/&nbsp; 隐私政策</p>
+</header>
+
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('cn')" id="btn-cn">中文</button>
+  <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+</div>
+
+<div class="container">
+
+  <!-- ===== CHINESE ===== -->
+  <div class="lang-cn visible" id="content-cn">
+
+    <div class="meta-bar">
+      <span><strong>应用名称：</strong>趣味决策转盘</span>
+      <span><strong>生效日期：</strong>2026年05月15日</span>
+      <span><strong>最后更新：</strong>2026年05月15日</span>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📋</span>概述</h2>
+      <p>感谢您使用<strong>趣味决策转盘</strong>（以下简称"本应用"）。本应用是一款轻松有趣的决策辅助工具，帮助您通过旋转转盘做出随机选择。</p>
+      <p>我们高度重视您的隐私。本隐私政策说明了本应用如何处理您的信息。请在使用本应用前仔细阅读。</p>
+      <div class="highlight-box">
+        核心承诺：本应用不收集、不上传任何个人身份信息。您创建的转盘内容仅保存在您的设备本地，绝不上传至任何服务器。
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📊</span>我们收集的数据</h2>
+      <p>本应用<strong>不收集</strong>以下任何信息：</p>
+      <div class="no-collect-grid">
+        <div class="no-collect-item">姓名或个人身份信息</div>
+        <div class="no-collect-item">电子邮件或账号信息</div>
+        <div class="no-collect-item">位置信息（GPS / 网络）</div>
+     <div class="no-collect-item">设备唯一标识符</div>
+      <div class="no-collect-item">联系人 / 通话记录</div>
+        <div class="no-collect-item">照片 / 摄像头 / 麦克风</div>
+      </div>
+      <p>本应用<strong>仅在本地存储</strong>以下数据（保存在您的设备上，不上传）：</p>
+      <ul>
+        <li>您自定义创建的转盘名称及选项内容</li>
+        <li>应用偏好设置（如主题、音效开关等）</li>
+        <li>历史旋转记录（如功能存在）</li>
+      </ul>
+    <p>上述数据完全由您掌控，可随时通过清除应用数据或卸载应用来删除。</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔐</span>权限说明</h2>
+      <p>本应用仅申请运行所必需的最少权限：</p>
+      <ul>
+      <li><strong>网络访问权限：</strong>仅用于加载广告（如集成 AdMob），不用于上传用户数据。</li>
+        <li><strong>振动权限（可选）：</strong>用于转盘停止时的触觉反馈，不涉及任何数据收集。</li>
+      </ul>
+      <p>本应用<strong>不申请</strong>麦克风、摄像头、位置、联系人等敏感权限。</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔗</span>第三方服务</h2>
+      <p>本应用可能集成以下第三方服务，各服务有其独立的隐私政策：</p>
+      <ul>
+        <li><strong>Google Play 服务：</strong>用于应用分发与更新，受 Google 隐私政策约束。</li>
+      <li><strong>Google AdMob（如适用）：</strong>用于展示广告，可能收集设备广告标识符以投放相关广告。您可在设备设置中选择退出个性化广告。</li>
+        <li><strong>Firebase Crashlytics（如适用）：</strong>收集匿名崩溃报告以改善应用稳定性，不包含任何个人信息。</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔒</span>数据安全</h2>
+      <p>由于本应用不收集或传输个人数据，数据泄露风险极低。我们的安全措施包括：</p>
+      <ul>
+        <li>所有用户内容（转盘选项等）均仅存储在设备本地，无网络传输。</li>
+        <li>应用仅申请功能所必需的最少权限。</li>
+        <li>定期发布更新以修复潜在安全漏洞。</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">👶</span>儿童隐私</h2>
+      <p>本应用适合全年龄段用户使用，但不会故意收集 13 岁以下儿童的个人信息。如果您是家长或监护人，发现您的孩子向我们提供了个人信息，请立即联系我们，我们将及时处理。</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">⚖️</span>您的权利</h2>
+      <p>您对本应用中的所有本地数据拥有完全控制权：</p>
+      <ul>
+        <li>随时在应用内编辑或删除您创建的转盘及选项。</li>
+        <li>通过清除应用数据或卸载应用删除所有本地存储内容。</li>
+        <li>在设备设置中选择退出个性化广告（如适用）。</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔄</span>政策更新</h2>
+      <p>我们可能会不时更新本隐私政策。更新后，我们将在本页面发布新版本并更新"最后更新"日期。建议您定期查阅。继续使用本应用即表示您接受更新后的政策。</p>
+    </div>
+
+    <div class="section">
+    <h2><span class="icon">📬</span>联系我们</h2>
+      <p>如您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
+      <ul>
+        <li><strong>电子邮件：</strong>2424162555@qq.com</li>
+        <li><strong>Google Play 开发者页面：</strong>通过应用商店内的"联系开发者"功能</li>
+      </ul>
+      <p>我们将在收到您的请求后 30 个工作日内予以回复。</p>
+    </div>
+
+  </div><!-- end lang-cn -->
+
+  <!-- ===== ENGLISH ===== -->
+  <div class="lang-en" id="content-en">
+
+    <div class="meta-bar">
+      <span><strong>App Name:</strong> Fun Decision Wheel</span>
+      <span><strong>Effective Date:</strong> May 15, 2026</span>
+      <span><strong>Last Updated:</strong> May 15, 2026</span>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📋</span>Overview</h2>
+      <p>Thank you for using <strong>Fun Decision Wheel</strong> (the "App"). This App is a lighthearted decision-making tool that helps you make random choices by spinning a customizable wheel.</p>
+      <p>We take your privacy seriously. This Privacy Policy explains how the App handles your information. Please read it carefully before using the App.</p>
+      <div class="highlight-box">
+        Core commitment: This App does not collect or upload any personally identifiable information. Wheel content you create is stored locally on your device only and is never transmitted to any server.
+      </div>
+    </div>
+
+    <div class="section">
+    <h2><span class="icon">📊</span>Data We Collect</h2>
+      <p>The App does <strong>not</strong> collect any of the following:</p>
+      <div class="no-collect-grid">
+        <div class="no-collect-item">Name or personal identity</div>
+        <div class="no-collect-item">Email or account info</div>
+        <div class="no-collect-item">Location (GPS / network)</div>
+      <div class="no-collect-item">Unique device identifiers</div>
+        <div class="no-collect-item">Contacts / call logs</div>
+     <div class="no-collect-item">Photos / camera / microphone</div>
+      </div>
+      <p>The App <strong>stores only the following data locally</strong> on your device (never uploaded):</p>
+      <ul>
+        <li>Custom wheel names and option entries you create</li>
+        <li>App preference settings (e.g., theme, sound effects toggle)</li>
+        <li>Spin history logs (if the feature is available)</li>
+      </ul>
+      <p>This data is entirely under your control and can be deleted at any time by clearing the App's data or uninstalling the App.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔐</span>Permissions</h2>
+      <p>The App requests only the minimum permissions required to function:</p>
+      <ul>
+        <li><strong>Internet access:</strong> Used solely to load advertisements (if AdMob is integrated). Not used to upload user data.</li>
+        <li><strong>Vibration (optional):</strong> Used for haptic feedback when the wheel stops. No data is collected.</li>
+      </ul>
+      <p>The App does <strong>not</strong> request sensitive permissions such as microphone, camera, location, or contacts.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔗</span>Third-Party Services</h2>
+      <p>The App may integrate the following third-party services, each governed by its own privacy policy:</p>
+      <ul>
+      <li><strong>Google Play Services:</strong> Used for app distribution and updates, subject to Google's Privacy Policy.</li>
+        <li><strong>Google AdMob (if applicable):</strong> Used to display advertisements. AdMob may collect your device's advertising identifier to serve relevant ads. You can opt out of personalized ads in your device settings.</li>
+     <li><strong>Firebase Crashlytics (if applicable):</strong> Collects anonymous crash reports to help improve app stability. No personal information is included.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔒</span>Data Security</h2>
+      <p>Because the App does not collect or transmit personal data, the risk of a data breach is minimal. Our security measures include:</p>
+    <ul>
+        <li>All user content (wheel options, etc.) is stored locally on your device with no network transmission.</li>
+        <li>The App requests only the minimum permissions necessary for its functionality.</li>
+        <li>We regularly release updates to address potential security vulnerabilities.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">👶</span>Children's Privacy</h2>
+      <p>This App is suitable for all ages and does not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately and we will take prompt action.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">⚖️</span>Your Rights</h2>
+      <p>You have full control over all local data in the App:</p>
+      <ul>
+        <li>Edit or delete any wheel or option you have created directly within the App at any time.</li>
+        <li>Delete all locally stored content by clearing the App's data or uninstalling the App.</li>
+        <li>Opt out of personalized advertising in your device settings (if applicable).</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔄</span>Policy Updates</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will post the revised version on this page and update the "Last Updated" date. We encourage you to review this policy periodically. Your continued use of the App after any changes constitutes your acceptance of the updated policy.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📬</span>Contact Us</h2>
+      <p>If you have any questions or concerns about this Privacy Policy, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> 2424162555@qq.com</li>
+        <li><strong>Google Play Developer Page:</strong> Use the "Contact Developer" feature in the app store listing</li>
+      </ul>
+      <p>We will respond to your request within 30 business days of receipt.</p>
+    </div>
+
+  </div><!-- end lang-en -->
+
+</div><!-- end container -->
+
+<footer>
+  &copy; 2026 Fun Decision Wheel / 趣味决策转盘. All rights reserved. &nbsp;|&nbsp; 保留所有权利。
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('content-cn').classList.toggle('visible', lang === 'cn');
+    document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+    document.getElementById('btn-cn').classList.toggle('active', lang === 'cn');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+  }
+</script>
+
+</body>
+</html>
