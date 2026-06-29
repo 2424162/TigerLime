@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy / 隐私政策 — Mini Game Box 小游戏盒子</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #14b8a6;
+      --bg: #f8fafc;
+      --card: #fff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --accent: #eff6ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: #fff;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    header .app-icon {
+      width: 72px;
+      height: 72px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      margin-bottom: 16px;
+    }
+    header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 4px; }
+    header .subtitle { font-size: 1rem; opacity: 0.9; margin-bottom: 2px; }
+    header p { font-size: 0.88rem; opacity: 0.75; }
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 24px;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .lang-btn {
+      padding: 8px 28px;
+      border-radius: 20px;
+      border: 2px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+    .section {
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section h2 .icon { font-size: 1.2rem; }
+    .section p { color: var(--text); margin-bottom: 10px; font-size: 0.95rem; }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul { padding-left: 20px; margin-bottom: 10px; }
+    .section ul li { font-size: 0.95rem; margin-bottom: 6px; color: var(--text); }
+    .highlight-box {
+      background: var(--accent);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 0.93rem;
+      color: var(--primary);
+      font-weight: 500;
+    }
+    .meta-bar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 24px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .meta-bar span strong { color: var(--text); }
+    .no-collect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .no-collect-item {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.88rem;
+      color: #991b1b;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .no-collect-item::before { content: "✗"; font-weight: 700; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    .lang-cn, .lang-en { display: none; }
+    .lang-cn.visible, .lang-en.visible { display: block; }
+    @media (max-width: 600px) {
+      .section { padding: 20px 18px; }
+      header h1 { font-size: 1.4rem; }
+      .no-collect-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">🎮</div>
+  <h1>小游戏盒子</h1>
+  <div class="subtitle">Mini Game Box</div>
+  <p>Privacy Policy &nbsp;/&nbsp; 隐私政策</p>
+</header>
+
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('cn')" id="btn-cn">中文</button>
+  <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+</div>
+
+<div class="container">
+  <div class="lang-cn visible" id="content-cn">
+    <div class="meta-bar">
+      <span><strong>应用名称：</strong>小游戏盒子</span>
+      <span><strong>英文名称：</strong>Mini Game Box</span>
+      <span><strong>生效日期：</strong>2026年06月29日</span>
+      <span><strong>最后更新：</strong>2026年06月29日</span>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📋</span>概述</h2>
+      <p>感谢您使用 <strong>小游戏盒子</strong>（<strong>Mini Game Box</strong>，以下简称“本应用”）。本应用为用户提供轻量休闲小游戏合集体验。</p>
+      <p>我们重视您的隐私。本隐私政策说明本应用如何处理您的信息，请在使用本应用前仔细阅读。</p>
+      <div class="highlight-box">核心承诺：本应用不主动收集可直接识别个人身份的信息。游戏进度、设置等内容主要保存在您的设备本地。</div>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📊</span>我们收集的数据</h2>
+      <p>本应用<strong>不会主动收集</strong>以下敏感信息：</p>
+      <div class="no-collect-grid">
+        <div class="no-collect-item">姓名或身份证明信息</div>
+        <div class="no-collect-item">电话号码或通讯录</div>
+        <div class="no-collect-item">精确地理位置</div>
+        <div class="no-collect-item">短信或通话记录</div>
+        <div class="no-collect-item">照片、摄像头或麦克风内容</div>
+        <div class="no-collect-item">支付卡或金融账户信息</div>
+      </div>
+      <p>本应用可能在设备本地保存以下数据：</p>
+      <ul>
+        <li>小游戏进度、分数、排行榜记录（如功能存在）</li>
+        <li>应用设置和偏好，例如音效、语言、主题等</li>
+        <li>本地缓存数据，用于改善加载速度和使用体验</li>
+      </ul>
+      <p>如本应用集成广告、统计或崩溃分析服务，第三方服务可能会按照其隐私政策自动处理设备信息、应用使用情况、广告标识符、崩溃日志等非敏感信息。</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🎯</span>数据使用目的</h2>
+      <ul>
+        <li>提供小游戏运行、进度保存、分数记录等核心功能</li>
+        <li>优化应用体验、性能和稳定性</li>
+        <li>分析崩溃或错误，以便修复问题</li>
+        <li>展示广告内容（如适用）</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔐</span>权限说明</h2>
+      <p>本应用仅申请运行所需的最少权限，可能包括：</p>
+      <ul>
+        <li><strong>网络访问权限：</strong>用于加载在线内容、广告或第三方服务（如适用）。</li>
+        <li><strong>振动权限：</strong>用于游戏反馈或交互提示（如适用）。</li>
+      </ul>
+      <p>本应用不主动申请与小游戏功能无关的敏感权限，例如通讯录、精确位置、麦克风或摄像头权限；如未来某项功能需要额外权限，我们会在系统授权弹窗中说明用途。</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔗</span>第三方服务</h2>
+      <p>本应用可能使用以下第三方服务，各服务有其独立的隐私政策：</p>
+      <ul>
+        <li><strong>Google Play 服务：</strong>用于应用分发、更新和基础服务。</li>
+        <li><strong>Google AdMob（如适用）：</strong>用于展示广告，可能处理广告标识符以投放和衡量广告。</li>
+        <li><strong>Firebase Analytics（如适用）：</strong>用于匿名统计分析，帮助了解应用使用情况。</li>
+        <li><strong>Firebase Crashlytics（如适用）：</strong>用于收集崩溃日志，帮助提升稳定性。</li>
+      </ul>
+      <p>您可以在设备设置中限制广告跟踪或关闭个性化广告。</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🤝</span>数据共享</h2>
+      <p>我们不会出售您的个人数据。仅在以下情况下可能共享必要信息：</p>
+      <ul>
+        <li>与为本应用提供服务的第三方 SDK 或平台服务共享必要的技术数据；</li>
+        <li>为遵守法律法规、监管要求或合法请求；</li>
+        <li>为保护用户、开发者或公众的合法权益。</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔒</span>数据安全与留存</h2>
+      <p>我们采取合理措施保护数据安全。本地数据保存在您的设备中，您可通过应用内功能、清除应用数据或卸载应用删除。</p>
+      <p>第三方服务处理的数据由其各自的隐私政策和数据留存规则约束。</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">👶</span>儿童隐私</h2>
+      <p>本应用适合休闲娱乐用途，但不会故意收集 13 岁以下儿童的个人信息。如果您是家长或监护人，并认为儿童向我们提供了个人信息，请联系我们，我们将及时处理。</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">⚖️</span>您的权利</h2>
+      <ul>
+        <li>您可以通过清除应用数据或卸载应用删除本地保存的数据。</li>
+        <li>您可以在设备设置中管理应用权限。</li>
+        <li>您可以在设备设置中限制个性化广告（如适用）。</li>
+        <li>如需咨询、删除或更正与您有关的信息，请通过下方邮箱联系我们。</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔄</span>政策更新</h2>
+      <p>我们可能会不时更新本隐私政策。更新后，我们将在本页面发布新版本并更新“最后更新”日期。继续使用本应用即表示您接受更新后的政策。</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📬</span>联系我们</h2>
+      <p>如您对本隐私政策有任何疑问、建议或请求，请通过以下方式联系我们：</p>
+      <ul>
+        <li><strong>电子邮件：</strong>2424162555@qq.com</li>
+        <li><strong>Google Play 开发者页面：</strong>通过应用商店内的“联系开发者”功能</li>
+      </ul>
+      <p>我们将在收到您的请求后尽快回复。</p>
+    </div>
+  </div>
+
+  <div class="lang-en" id="content-en">
+    <div class="meta-bar">
+      <span><strong>App Name:</strong> Mini Game Box</span>
+      <span><strong>Chinese Name:</strong> 小游戏盒子</span>
+      <span><strong>Effective Date:</strong> June 29, 2026</span>
+      <span><strong>Last Updated:</strong> June 29, 2026</span>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📋</span>Overview</h2>
+      <p>Thank you for using <strong>Mini Game Box</strong> (<strong>小游戏盒子</strong>, the “App”). The App provides a lightweight collection of casual mini games.</p>
+      <p>We value your privacy. This Privacy Policy explains how the App handles your information. Please read it carefully before using the App.</p>
+      <div class="highlight-box">Core commitment: The App does not actively collect information that directly identifies you. Game progress, settings, and similar content are primarily stored locally on your device.</div>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📊</span>Data We Collect</h2>
+      <p>The App does <strong>not actively collect</strong> the following sensitive information:</p>
+      <div class="no-collect-grid">
+        <div class="no-collect-item">Name or identity information</div>
+        <div class="no-collect-item">Phone number or contacts</div>
+        <div class="no-collect-item">Precise geolocation</div>
+        <div class="no-collect-item">SMS or call logs</div>
+        <div class="no-collect-item">Photos, camera, or microphone content</div>
+        <div class="no-collect-item">Payment card or financial account information</div>
+      </div>
+      <p>The App may store the following data locally on your device:</p>
+      <ul>
+        <li>Mini game progress, scores, and leaderboard records (if the feature is available)</li>
+        <li>App settings and preferences, such as sound, language, theme, and similar options</li>
+        <li>Local cache data used to improve loading speed and user experience</li>
+      </ul>
+      <p>If the App integrates advertising, analytics, or crash reporting services, third-party services may automatically process non-sensitive information such as device information, app usage, advertising identifiers, and crash logs according to their own privacy policies.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🎯</span>How We Use Data</h2>
+      <ul>
+        <li>To provide core features such as mini game operation, progress saving, and score records</li>
+        <li>To optimize app experience, performance, and stability</li>
+        <li>To analyze crashes or errors and fix issues</li>
+        <li>To display advertising content (if applicable)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔐</span>Permissions</h2>
+      <p>The App requests only the minimum permissions needed to operate, which may include:</p>
+      <ul>
+        <li><strong>Internet access:</strong> Used to load online content, advertisements, or third-party services (if applicable).</li>
+        <li><strong>Vibration:</strong> Used for game feedback or interaction prompts (if applicable).</li>
+      </ul>
+      <p>The App does not actively request sensitive permissions unrelated to mini game functionality, such as contacts, precise location, microphone, or camera. If a future feature requires additional permission, the purpose will be explained in the system permission prompt.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔗</span>Third-Party Services</h2>
+      <p>The App may use the following third-party services, each governed by its own privacy policy:</p>
+      <ul>
+        <li><strong>Google Play Services:</strong> Used for app distribution, updates, and basic services.</li>
+        <li><strong>Google AdMob (if applicable):</strong> Used to display advertisements and may process advertising identifiers for ad delivery and measurement.</li>
+        <li><strong>Firebase Analytics (if applicable):</strong> Used for anonymous analytics to help understand app usage.</li>
+        <li><strong>Firebase Crashlytics (if applicable):</strong> Used to collect crash logs and improve stability.</li>
+      </ul>
+      <p>You can limit ad tracking or turn off personalized ads in your device settings.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🤝</span>Data Sharing</h2>
+      <p>We do not sell your personal data. Necessary information may be shared only in the following cases:</p>
+      <ul>
+        <li>With third-party SDKs or platform services that provide services for the App;</li>
+        <li>To comply with laws, regulations, regulatory requirements, or lawful requests;</li>
+        <li>To protect the lawful rights and interests of users, developers, or the public.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔒</span>Data Security and Retention</h2>
+      <p>We take reasonable measures to protect data security. Local data is stored on your device and can be deleted through in-app features, by clearing app data, or by uninstalling the App.</p>
+      <p>Data processed by third-party services is governed by their respective privacy policies and retention rules.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">👶</span>Children's Privacy</h2>
+      <p>The App is intended for casual entertainment and does not knowingly collect personal information from children under 13. If you are a parent or guardian and believe a child has provided us with personal information, please contact us and we will take prompt action.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">⚖️</span>Your Rights</h2>
+      <ul>
+        <li>You can delete locally stored data by clearing app data or uninstalling the App.</li>
+        <li>You can manage app permissions in your device settings.</li>
+        <li>You can limit personalized advertising in your device settings (if applicable).</li>
+        <li>To request information, deletion, or correction related to your data, please contact us using the email below.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔄</span>Policy Updates</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will post the revised version on this page and update the “Last Updated” date. Your continued use of the App means you accept the updated policy.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📬</span>Contact Us</h2>
+      <p>If you have any questions, suggestions, or requests about this Privacy Policy, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> 2424162555@qq.com</li>
+        <li><strong>Google Play Developer Page:</strong> Use the “Contact Developer” feature in the app store listing</li>
+      </ul>
+      <p>We will respond to your request as soon as reasonably possible.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 Mini Game Box / 小游戏盒子. All rights reserved. &nbsp;|&nbsp; 保留所有权利。
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('content-cn').classList.toggle('visible', lang === 'cn');
+    document.getElementById('content-en').classList.toggle('visible', lang === 'en');
+    document.getElementById('btn-cn').classList.toggle('active', lang === 'cn');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+  }
+</script>
+
+</body>
+</html>
